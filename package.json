@@ -1,0 +1,27 @@
+{
+  "name": "mvp-movie-app",
+  "version": "1.0.0",
+  "description": "mvp-movie-app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rs214/momoviesmoproblems.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rs214/momoviesmoproblems/issues"
+  },
+  "homepage": "https://github.com/rs214/momoviesmoproblems#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "lodash": "^4.17.4",
+    "method-override": "^2.3.8",
+    "mongoose": "^4.9.7",
+    "node-restful": "^0.2.6"
+  }
+}
