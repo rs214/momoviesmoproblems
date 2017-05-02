@@ -24,6 +24,14 @@ app.post('/main', function (req, res) {
     res.json(data);
   })
 })
+
+app.delete('/main/:id', function (req, res) {
+  var id = req.params.id;
+  console.log(id);
+  db.main.remove({_id: mongojs.ObjectId(id)}, function (err, data) {
+    res.json(data);
+  })
+})
 // app.use('/', function (req, res, next) {
 //   res.send('Hello World!')
 // })

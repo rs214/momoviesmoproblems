@@ -26,14 +26,22 @@
       <td> <input class = "form-control" ng-model = "movie.movie"> </td>
       <td> <input class = "form-control" ng-model = "movie.release"> </td>
       <td> <input class = "form-control" ng-model = "movie.rating"> </td>
-      <td> <button class = "btn btn primary" ng-click = "addMovie()">Add Movie </button></td>
+      <td> <button class = "btn btn-success" ng-click = "addMovie()">Add Movie </button></td>
     </tr>
       <tr ng-repeat= "movie in main">
         <td>{{movie.movie}}</td>
         <td>{{movie.release}}</td>
         <td>{{movie.rating}}</td>
+        <td button class = "btn btn-danger" ng-click = "remove(movie._id)"> Remove </td>
       </tr>
     </table>
+
+
+    <!-- 16:9 aspect ratio -->
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="..."></iframe>
+</div>
+
    <!--  <div>
     {{movie}}
     </div> -->
