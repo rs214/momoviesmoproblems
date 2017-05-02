@@ -9,12 +9,19 @@ myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
   //   release: 2017,
   //   rating: 10
   // }]
-
   $http.get('/main').then(function(response) {
     console.log("GOT MA DATA BITCHEZ");
-    console.log(response);
     $scope.main = response.data;
   });
+
+  $scope.addMovie = function () {
+    console.log($scope.movie, 'MOVIE SUP')
+    $http({
+          method: 'POST',
+          url: '/main',
+          data: JSON.stringify($scope.movie)
+        })
+  }
 
 }]);
 

@@ -18,6 +18,12 @@ app.get('/main', function (req, res) {
   })
 });
 
+app.post('/main', function (req, res) {
+  console.log(req.body, 'ROBERTISCOOL');
+  db.main.insert(req.body, function(err, data) {
+    res.json(data);
+  })
+})
 // app.use('/', function (req, res, next) {
 //   res.send('Hello World!')
 // })
