@@ -2,7 +2,8 @@ var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var port = process.env.PORT || 8080;
-var _ = require('lodash');
+var mongojs = require('mongojs');
+var db = mongojs('main', ['movies']);
 
 var app = express();
 
@@ -11,16 +12,10 @@ app.use(bodyParser.json());
 
 app.get('/main', function (req, res) {
   console.log("HELLO THIS IS A GET REQUEST")
-
-  movie1 = {
-    Movie: 'Kendrick',
-    Release: 2017,
-    Rating: 10
-  }
-
-  var main = [movie1];
-  res.json(main);
-
+  db.main.find(function(err, data) {
+    console.log(data);
+    res.json(data);
+  })
 });
 
 // app.use('/', function (req, res, next) {
