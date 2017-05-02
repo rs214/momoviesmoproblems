@@ -9,6 +9,19 @@ var app = express();
 app.use(express.static(__dirname + '/app'));
 app.use(bodyParser.json());
 
+app.get('/main', function (req, res) {
+  console.log("HELLO THIS IS A GET REQUEST")
+
+  movie1 = {
+    Movie: 'Kendrick',
+    Release: 2017,
+    Rating: 10
+  }
+
+  var main = [movie1];
+  res.json(main);
+
+});
 
 // app.use('/', function (req, res, next) {
 //   res.send('Hello World!')

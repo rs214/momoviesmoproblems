@@ -1,5 +1,5 @@
 <!DOCTYPE>
-<html ng-app>
+<html ng-app = "myApp">
 <head>
   <title>Movie List</title>
 </head>
@@ -10,18 +10,26 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 <body>
-  <div class="container">
+  <div class="container" ng-controller = "AppCtrl">
   <h1>Movie Ratings List</h1>
 
   <table class = "table">
     <thread>
       <tr>
         <th> Movie </th>
-        <th> Release Year </th>
+        <th> Release </th>
         <th> Rating </th>
       </tr>
     </thread>
+    <tbody>
+      <tr ng-repeat= "movie in main">
+        <td>{{movie.movie}}</td>
+        <td>{{movie.release}}</td>
+        <td>{{movie.rating}}</td>
+      </tr>
+    </table>
   </div>
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js'></script>
+  <script src= 'controllers/controller.js'></script>
 </body>
 </html>
