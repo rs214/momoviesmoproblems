@@ -11,9 +11,9 @@
 
 <body>
   <div class="container" ng-controller = "AppCtrl">
-  <h1>Movie Ratings List</h1>
+  <h1>Movies to Watch</h1>
 
-  <table class = "table">
+  <table class = "table table-striped">
     <thread>
       <tr>
         <th> Movie </th>
@@ -32,16 +32,13 @@
         <td>{{movie.movie}}</td>
         <td>{{movie.release}}</td>
         <td>{{movie.rating}}</td>
-        <td button class = "btn btn-danger" ng-click = "remove(movie._id)"> Remove </td>
+        <td button class = "btn btn-danger" ng-click = "removeMovie(movie._id)"> Remove </td>
       </tr>
     </table>
 
-
-    <!-- 16:9 aspect ratio -->
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="..."></iframe>
-</div>
-
+    <div>
+    <iframe src="//giphy.com/embed/GVMhZwYv8U5NK" width="480" height="269.6" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/GVMhZwYv8U5NK">via GIPHY</a></p>
+    </div>
    <!--  <div>
     {{movie}}
     </div> -->
